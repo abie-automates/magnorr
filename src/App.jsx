@@ -321,7 +321,7 @@ function ExpertEndorsement() {
         <Rv>
           <div style={{ textAlign: "center", marginBottom: 24 }}>
             <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 900, color: "var(--ink)", lineHeight: 1.3, letterSpacing: "-0.02em" }}>
-              The growth experts scaling <Pu>AI startups</Pu> are all saying it.
+              Hear it from the guy who grew <Pu>Rork to $1Bn+ valuation</Pu>.
             </h2>
             <p style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--ink-lt)", marginTop: 8 }}>Hear it from them.</p>
           </div>
