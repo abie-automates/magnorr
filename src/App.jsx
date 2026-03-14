@@ -469,6 +469,58 @@ function MathSection() {
 }
 
 /* ═══════════════════════════════════════════════════
+   VIDEO GALLERY - Real YouTube Shorts
+   ═══════════════════════════════════════════════════ */
+function VideoGallery() {
+  const ids = ["uYlyDgWhGQw","SWtMlcY16Xo","ALexnEbjpXs","CMtgsAGHVkU","LBW_kUzDi84","bp25LR8Ocz0","H_86ong_7rs","ot2Cj7zD9Ro","LtU6dQOy6o4","adEqZKKrwtk","Q2bGPyxFiwU","2aIK0MJ6pF0","JMxJaTnUYX4","_DrGmuLQ97E","juvA9VaE8g4","CFimAbkUOvM","U8ySju7Bkk8","ysJ-bRAj20g","XkA86-ocKNI","MoH4GiHS5cw","uQXDhBiRwmU","xFie8A3H_rQ","ZBjJbfXVL_0","DmIRoyMEvlI"];
+  const row1 = ids.slice(0, 12);
+  const row2 = ids.slice(12);
+  const doubled1 = [...row1, ...row1];
+  const doubled2 = [...row2, ...row2];
+  const Card = ({ vid }) => (
+    <div style={{ width: 200, height: 356, flexShrink: 0, borderRadius: 12, overflow: "hidden", border: "3px solid rgba(255,255,255,0.08)", background: "#000", position: "relative" }}>
+      <iframe
+        src={"https://www.youtube.com/embed/" + vid + "?loop=1&controls=0&mute=1&autoplay=0"}
+        style={{ width: "100%", height: "100%", border: "none" }}
+        title="Short"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  );
+  return (
+    <section style={{ padding: "80px 0", borderTop: "3px solid var(--bdr)", borderBottom: "3px solid var(--bdr)", background: "var(--ink)", position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "absolute", inset: 0, opacity: 0.03, backgroundImage: "linear-gradient(rgba(196,181,253,1) 1px, transparent 1px), linear-gradient(90deg, rgba(196,181,253,1) 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
+      <div style={{ position: "absolute", top: "-20%", left: "20%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%)", pointerEvents: "none" }} />
+      <div style={{ textAlign: "center", marginBottom: 48, position: "relative", zIndex: 2, padding: "0 24px" }}>
+        <Rv>
+          <span style={{ fontFamily: "var(--font-px)", fontSize: 8, color: "var(--pl)", textTransform: "uppercase", letterSpacing: "0.1em", display: "block", marginBottom: 16 }}>Content That Converts</span>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(24px, 3.5vw, 40px)", fontWeight: 900, color: "#fff", lineHeight: 1.2, letterSpacing: "-0.03em", marginBottom: 12 }}>
+            <span style={{ color: "#C4B5FD" }}>AI UGC</span> that's indistinguishable<br />from the real thing.
+          </h2>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.7, maxWidth: 460, margin: "0 auto" }}>
+            Every video is scripted for conversion, matched to your brand voice. <span style={{ color: "#C4B5FD", fontWeight: 600 }}>No filming required.</span>
+          </p>
+        </Rv>
+      </div>
+      <div style={{ overflow: "hidden", marginBottom: 16, position: "relative", zIndex: 2 }}>
+        <div style={{ display: "flex", gap: 16, animation: "gallery-left 60s linear infinite", width: "max-content" }}>
+          {doubled1.map((vid, i) => <Card key={"a" + i} vid={vid} />)}
+        </div>
+      </div>
+      <div style={{ overflow: "hidden", position: "relative", zIndex: 2 }}>
+        <div style={{ display: "flex", gap: 16, animation: "gallery-right 70s linear infinite", width: "max-content" }}>
+          {doubled2.map((vid, i) => <Card key={"b" + i} vid={vid} />)}
+        </div>
+      </div>
+      <div style={{ textAlign: "center", marginTop: 40, position: "relative", zIndex: 2 }}>
+        <Rv><CTA text="Get Content Like This →" style={{ background: "#fff", color: "var(--p)", borderColor: "#fff" }} /></Rv>
+      </div>
+    </section>
+  );
+}
+
+/* ═══════════════════════════════════════════════════
    4. STRUGGLE (rewritten for B2C SaaS)
    ═══════════════════════════════════════════════════ */
 function StruggleSection() {
@@ -910,6 +962,8 @@ export default function MagnorLanding() {
         @keyframes marquee-right { 0% { transform: translateX(-33.333%); } 100% { transform: translateX(0); } }
         @keyframes pulseSweep { 0% { left: -10%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
         @keyframes icpPulse { 0% { opacity: 0.6; transform: scale(1); } 100% { opacity: 0; transform: scale(1.15); } }
+        @keyframes gallery-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes gallery-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
         .arrow-bounce { animation: arrowBounce 2s ease-in-out infinite; }
         @keyframes arrowBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
         @media (max-width: 768px) { nav > div:last-child > a.nav-lnk { display: none !important; } }
@@ -929,6 +983,7 @@ export default function MagnorLanding() {
         <ExpertEndorsement />
         <MathSection />
         <StruggleSection />
+        <VideoGallery />
         <Deliverables />
         <CaseStudies />
         <HowItWorks />
