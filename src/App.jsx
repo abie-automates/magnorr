@@ -253,7 +253,6 @@ function Hero() {
       <Rv d={0.3}>
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
           <CTA text="Book Your Strategy Call →" />
-          <CTA text="See Case Studies" href="#results" variant="s" />
         </div>
         <p style={{ marginTop: 14, fontFamily: "var(--font-body)", fontSize: 13, color: "var(--ink-mu)" }}>Not a sales pitch. You'll leave with a custom campaign plan.</p>
       </Rv>
