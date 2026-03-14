@@ -317,17 +317,44 @@ function ExpertEndorsement() {
   }, []);
   return (
     <section style={{ padding: "60px 24px", borderTop: "3px solid var(--bdr)" }}>
-      <div style={{ maxWidth: 550, margin: "0 auto" }}>
+      <div style={{ maxWidth: 650, margin: "0 auto" }}>
         <Rv>
-          <div ref={ref} style={{ display: "flex", justifyContent: "center" }} />
+          <div style={{ textAlign: "center", marginBottom: 24 }}>
+            <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 900, color: "var(--ink)", lineHeight: 1.3, letterSpacing: "-0.02em" }}>
+              The growth experts scaling <Pu>AI startups</Pu> are all saying it.
+            </h2>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--ink-lt)", marginTop: 8 }}>Hear it from them.</p>
+          </div>
+        </Rv>
+        <Rv d={0.1}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16, justifyContent: "center" }}>
+            {/* Tweet */}
+            <div ref={ref} style={{ flex: "1 1 auto", maxWidth: 550 }} />
+            {/* Arrow on right */}
+            <a href={TWEET_URL} target="_blank" rel="noopener noreferrer" className="arrow-bounce" style={{ flex: "0 0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, textDecoration: "none", padding: "12px 8px" }}>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style={{ transform: "rotate(-90deg)" }}><path d="M14 6V22M14 22L7 15M14 22L21 15" stroke="var(--p)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <span style={{ fontFamily: "var(--font-px)", fontSize: 7, color: "var(--p)", textTransform: "uppercase", letterSpacing: "0.06em", writingMode: "vertical-rl", textOrientation: "mixed" }}>Read it</span>
+            </a>
+          </div>
         </Rv>
         <Rv d={0.15}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, marginTop: 12, padding: "10px 20px", background: "var(--p-bg)", border: "2px solid var(--pl)", maxWidth: 420, margin: "12px auto 0" }}>
-            <PxDot size={6} color="var(--p)" />
-            <p style={{ fontFamily: "var(--font-head)", fontSize: 11, fontWeight: 700, color: "var(--ink)", lineHeight: 1.4 }}>
-              Scaled <Pu>Rork</Pu>, grew <Pu>Arcads AI</Pu> · VC at <Pu>Fabric VC</Pu> · Fractional growth for AI startups
-            </p>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 14, marginTop: 12, flexWrap: "wrap", maxWidth: 520, margin: "12px auto 0" }}>
+            {[
+              { label: "Rork", stat: "$1Bn+ valuation" },
+              { label: "Arcads AI", stat: "$1M+ MRR" },
+              { label: "Fabric VC", stat: "Venture Partner" },
+            ].map((c, i) => (
+              <div key={i} style={{ padding: "8px 14px", background: "var(--p-bg)", border: "2px solid var(--pl)", textAlign: "center" }}>
+                <div style={{ fontFamily: "var(--font-head)", fontSize: 12, fontWeight: 800, color: "var(--p)" }}>{c.label}</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "var(--ink-lt)", marginTop: 2 }}>{c.stat}</div>
+              </div>
+            ))}
           </div>
+          {/* Floating click incentive */}
+          <a href={TWEET_URL} target="_blank" rel="noopener noreferrer" className="arrow-bounce" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, marginTop: 14, textDecoration: "none" }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="var(--p)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <span style={{ fontFamily: "var(--font-px)", fontSize: 7, color: "var(--p)", textTransform: "uppercase", letterSpacing: "0.06em" }}>Click the tweet ↑</span>
+          </a>
         </Rv>
       </div>
     </section>
