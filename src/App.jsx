@@ -219,14 +219,14 @@ function Hero() {
           boxShadow: "0 0 20px rgba(124,58,237,0.1)", marginBottom: 24, cursor: "pointer",
         }}>
           <div className="blink-px" style={{ width: 8, height: 8, background: "var(--p)" }} />
-          <span style={{ fontFamily: "var(--font-head)", fontSize: 12, color: "var(--p)", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 800 }}>Attention: B2C SaaS Founders</span>
+          <span style={{ fontFamily: "var(--font-head)", fontSize: 12, color: "var(--p)", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 800 }}>Attention: B2B SaaS Founders</span>
         </a>
       </Rv>
 
       {/* Headline */}
       <Rv d={0.1}>
         <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(26px, 4.2vw, 48px)", fontWeight: 900, lineHeight: 1.15, color: "var(--ink)", maxWidth: 840, margin: "0 auto 24px", letterSpacing: "-0.03em" }}>
-          We Help <span style={{ color: "var(--p)" }}>B2C SaaS</span> <span style={{ color: "var(--p)" }}>Actually Make Money On Ads</span> While Acquiring Users Within <span style={{ color: "var(--p)" }}>60 Days</span>
+          We Help <span style={{ color: "var(--p)" }}>B2B SaaS</span> <span style={{ color: "var(--p)" }}>Actually Make Money On Ads</span> While Acquiring Users Within <span style={{ color: "var(--p)" }}>60 Days</span>
         </h1>
       </Rv>
 
@@ -521,7 +521,7 @@ function VideoGallery() {
 }
 
 /* ═══════════════════════════════════════════════════
-   4. STRUGGLE (rewritten for B2C SaaS)
+   4. STRUGGLE (rewritten for B2B SaaS)
    ═══════════════════════════════════════════════════ */
 function StruggleSection() {
   const boxes = [
